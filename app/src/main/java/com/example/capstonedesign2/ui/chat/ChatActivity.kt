@@ -68,7 +68,7 @@ class ChatActivity : AppCompatActivity(), ChatView, RefreshView, ReminderView {
         chatView.getBeforeChat(user.accessToken, roomId)
         reminderService.getReminder(user.accessToken, roomId.toLong())
 
-        val url = "ws://3.39.130.73:8080/ws-stomp/websocket"
+        val url = "ws://1번째 멀티서버 주소/ws-stomp/websocket"
 
         stompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, url)
         val stompHeaders = StompHeader("Authorization", "Bearer ${user.accessToken}")
